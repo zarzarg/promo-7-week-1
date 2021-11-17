@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,78 @@
     <link href="../styles/contact.css" rel="stylesheet">
     <title>Contact</title>
 </head>
+
 <body>
     <header>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="glossary.html">Glossary</a>
-            <a href="gcontact.html">Contact</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <main></main>
-    <footer></footer>
-    
+    <main>
+        <form action="../script/controls.php" method="post">
+            <fieldset>
+                <legend>Information personnelle</legend>
+                <p>
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Nom de famille">
+                </p>
+                <p>
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Prénom">
+                </p>
+                <p>
+                    <label for="adress">Adresse</label>
+                    <input type="text" id="adress" name="adresse" placeholder="adresse">
+                </p>
+                <p>
+                    <label for="mail">Email</label>
+                    <input type="email" id="mail" name="email">
+                </p>
+                <p>
+                    <label for="tel">Numéro de téléphone</label>
+                    <input type="tel" id="tel" name="tel" pattern="[0-9]{10}">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Information complémentaires</legend>
+                <p>
+                    <label for="ville_nai">ville de naissance</label>
+                    <input type="text" id="ville_nai" list="ville_corse">
+                </p>
+                <datalist id="ville_corse"> <!-- Liaison entre la list et la data list-->
+                    <option value="ajaccio">Ajaccio</option>
+                    <option value="bastia">Bastia</option>
+                    <option value="calvi">Calvi</option>
+                    <option value="bonifacio">Bonifacio</option>
+                </datalist>
+                <p>
+                    <label for="color_pref">Couleur préférée</label>
+                    <input type="color" id="color_pref" name="color" />
+                </p>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="glossary.html">Glossary</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+        <div>
+            <a href="cgv.html">cgv</a>
+            <a href="legal">Mentions légales</a>
+        </div>
+        <div>
+            Logo
+        </div>
+    </footer>
+
 </body>
+
 </html>
